@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&display=swap');
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Sassy Project Card Styles --- */
+
+@keyframes sassyHalo {
+  0% { box-shadow: 0 0 0 4px #3b82f655, 0 0 32px 8px #8b5cf6cc, 0 1.5px 8px 0 #22d3ee33; }
+  25% { box-shadow: 0 0 0 4px #8b5cf655, 0 0 32px 8px #67e8f9cc, 0 1.5px 8px 0 #8b5cf633; }
+  50% { box-shadow: 0 0 0 4px #67e8f955, 0 0 32px 8px #3b82f6cc, 0 1.5px 8px 0 #67e8f933; }
+  75% { box-shadow: 0 0 0 4px #f472b655, 0 0 32px 8px #3b82f6cc, 0 1.5px 8px 0 #f472b633; }
+  100% { box-shadow: 0 0 0 4px #3b82f655, 0 0 32px 8px #8b5cf6cc, 0 1.5px 8px 0 #22d3ee33; }
+}
+
+.sassy-card {
+  position: relative;
+  border-radius: 1.25rem;
+  background: rgba(24, 24, 27, 0.7);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 0 1.5px 8px 0 #22d3ee33;
+  /* border: 3px solid transparent; */
+  /* border-image: linear-gradient(120deg, #3b82f6, #8b5cf6, #22c55e, #3b82f6) 1; */
+  /* animation: borderGradient 6s linear infinite; */
+  overflow: hidden;
+  backdrop-filter: blur(18px) saturate(1.2);
+  transition: transform 0.25s cubic-bezier(.4,2,.3,1), box-shadow 0.25s, border-color 0.25s;
+  box-shadow: 0 4px 32px 0 rgba(34,211,238,0.10), 0 1.5px 8px 0 #22d3ee33;
+}
+.sassy-card:hover {
+  transform: scale(1.045) perspective(800px) rotateY(var(--tilt-x, 0deg)) rotateX(var(--tilt-y, 0deg));
+  animation: sassyHalo 6s linear infinite;
+}
+.sassy-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.25rem;
+  pointer-events: none;
+  background: linear-gradient(120deg,rgba(255,255,255,0.08) 0%,rgba(34,211,238,0.08) 100%);
+  z-index: 1;
+}
+.sassy-card::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 18px;
+  border-radius: 1.25rem 1.25rem 0 0;
+  background: linear-gradient(90deg,rgba(255,255,255,0.18) 0%,rgba(34,211,238,0.08) 100%);
+  filter: blur(6px);
+  z-index: 2;
+}
+.sassy-card-inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.sassy-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.sassy-badge {
+  background: rgba(103,232,249,0.18);
+  color: #a5f3fc;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  box-shadow: 0 1px 4px 0 #67e8f933;
+  border: 1.5px solid #67e8f944;
+  backdrop-filter: blur(4px);
+  letter-spacing: 0.02em;
+  transition: background 0.2s, color 0.2s;
+}
+.sassy-title {
+  font-family: inherit;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: linear-gradient(90deg,#67e8f9,#a78bfa,#f472b6,#3b82f6);
+  background-size: 200% 200%;
+  background-position: 0% 50%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 2px 12px #22d3ee55;
+  margin-bottom: 0.5rem;
+  transition: text-shadow 0.2s, filter 0.2s, background-position 0.6s;
+  animation: sassyTitleGradient 6s linear infinite;
+}
+@keyframes sassyTitleGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.sassy-card:hover .sassy-title {
+  filter: brightness(1.2) drop-shadow(0 0 8px #a78bfa);
+  text-shadow: 0 4px 24px #a78bfa99;
+}
+.sassy-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+.sassy-action-btn {
+  position: relative;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  background: rgba(24,24,27,0.7);
+  border: 2px solid #22d3ee44;
+  box-shadow: 0 2px 8px #22d3ee22;
+  display: flex; align-items: center; justify-content: center;
+  transition: box-shadow 0.2s, border-color 0.2s, background 0.2s;
+  overflow: visible;
+}
+.sassy-action-btn:hover {
+  box-shadow: 0 0 16px #a78bfa33, 0 2px 8px #22d3ee11;
+  border-color: #a78bfa;
+  background: rgba(34,211,238,0.10);
+}
+.sassy-action-btn svg {
+  transition: transform 0.2s, color 0.2s;
+}
+.sassy-action-btn:hover svg {
+  transform: scale(1.08) rotate(-4deg);
+  color: #a5b4fc;
+}
+.sassy-tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(24,24,27,0.95);
+  color: #a5f3fc;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.5rem;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s;
+  z-index: 10;
+}
+.sassy-action-btn:hover .sassy-tooltip {
+  opacity: 1;
+}
+.sassy-dots {
+  display: flex;
+  gap: 0.4rem;
+  margin-top: 0.5rem;
+}
+.sassy-dot {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  border: 2px solid #23233a;
+  box-shadow: 0 1px 4px #23233a44;
+  transition: transform 0.2s;
+  animation: dotPulse 2.2s infinite alternate;
+}
+@keyframes dotPulse {
+  0% { transform: scale(1); }
+  60% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+/* --- End Sassy Project Card Styles --- */
+
+/* Winner Project Card Styles */
+.sassy-card.winner-card {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 
+              0 0 0 1px rgba(251, 191, 36, 0.3),
+              0 0 20px rgba(251, 191, 36, 0.2);
+  animation: winnerGlow 3s ease-in-out infinite alternate;
+}
+
+.sassy-card.winner-card:hover {
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 
+              0 0 0 1px rgba(251, 191, 36, 0.5),
+              0 0 30px rgba(251, 191, 36, 0.4);
+}
+
+@keyframes winnerGlow {
+  0% {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 
+                0 0 0 1px rgba(251, 191, 36, 0.3),
+                0 0 20px rgba(251, 191, 36, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18), 
+                0 0 0 1px rgba(251, 191, 36, 0.5),
+                0 0 30px rgba(251, 191, 36, 0.4);
+  }
+}
+
+.winner-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 2rem;
+  z-index: 10;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+/* Style for rich text in experience highlights */
+.experience-highlight b,
+.experience-highlight strong {
+  font-weight: bold;
+  color: #a5f3fc;
+}
+.experience-highlight i,
+.experience-highlight em {
+  font-style: italic;
+  color: #a5b4fc;
+}
+.experience-highlight a {
+  color: #67e8f9;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.experience-highlight a:hover {
+  color: #38bdf8;
+  text-decoration: underline wavy;
+}
+
+/* Style for rich text in recommendations */
+.recommendation-text b,
+.recommendation-text strong {
+  font-weight: bold;
+  color: #a5f3fc;
+}
+.recommendation-text i,
+.recommendation-text em {
+  font-style: italic;
+  color: #a5b4fc;
+}
+.recommendation-text a {
+  color: #67e8f9;
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.recommendation-text a:hover {
+  color: #38bdf8;
+  text-decoration: underline wavy;
+}
+
+@keyframes rotate-3d {
+  0% {
+    transform: perspective(1000px) rotate3d(1, 1, 1, 0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+.animate-3d-rotate {
+  animation: rotate-3d 2.5s infinite linear;
+}
