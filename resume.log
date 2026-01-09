@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.9)  8 JAN 2026 14:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.9)  9 JAN 2026 14:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1184,7 +1184,7 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
 Package hyperref Warning: Suppressing empty link on input line 43.
 
 ) (./resume/projects.tex) (./resume/skills.tex
-Overfull \hbox (24.71463pt too wide) in alignment at lines 12--40
+Overfull \hbox (24.71463pt too wide) in alignment at lines 12--37
 [] [] 
  []
 
@@ -1207,10 +1207,10 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 Here is how much of TeX's memory you used:
  31854 strings out of 468178
  651231 string characters out of 5436863
- 1246694 words of memory out of 5000000
+ 1247695 words of memory out of 5000000
  60053 multiletter control sequences out of 15000+600000
  629285 words of font info for 106 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 131i,11n,135p,544b,537s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 131i,11n,135p,544b,462s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 Output written on resume.pdf (1 page).
