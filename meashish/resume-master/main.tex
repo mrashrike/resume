@@ -1,0 +1,125 @@
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[margin, centered]{res}
+\topmargin=-0.5in
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\textwidth=6.5in
+\itemsep=0in
+\parsep=0in
+\newsectionwidth{1in}
+\usepackage[pdftex]{graphicx}
+\usepackage{enumitem}
+\usepackage{wrapfig}
+\usepackage{helvet}
+\usepackage[colorlinks = true,
+            linkcolor = blue,
+            urlcolor  = blue,
+            citecolor = blue,
+            anchorcolor = blue]{hyperref}
+\setlength{\textwidth}{6.5in} % Text width of the document
+\setlength{\textheight}{720pt}
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	NAME AND ADDRESS SECTION
+%----------------------------------------------------------------------------------------\
+\begin{center}
+    \hspace{-\hoffset}
+    \huge\bf{\href{https://www.ashrike.tech}{Ashish Kumar}}
+\end{center}
+\vspace{-7mm}
+\moveleft\hoffset\vbox{\hrule width 19cm height 0.5pt}
+\vspace{-8mm}
+\begin{center}
+    \hspace{-\hoffset}
+    \href{mailto:mrashrike@gmail.com}{mrashrike@gmail.com} ~\textbullet~ \(+91\) 8971218068 ~\textbullet~ \ Bangalore, India
+\end{center}
+\vspace{-7mm}
+\begin{resume}
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
+\section{Education}
+\textbf{Master of Computer Applications}  \\
+\href{}{A.M.C Engineering College, Bangalore}
+\begin{itemize}
+ \item Class:  \textbf{First Class} 
+\end{itemize}
+\textbf{High School} - \href{}{D.A.V Pub School, Bokaro} (CBSE) \\
+
+ 
+%----------------------------------------------------------------------------------------
+%	EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	TECHNICAL SKILLS SECTION
+%----------------------------------------------------------------------------------------
+\section{Key \hspace{-1mm} Skills}
+\textbf{PYTHON}\\
+NumPy, Pandas, SciPy, Scikit-learn, Keras, TensorFlow, PyTorch \\
+\textbf{DATA PIPELINE \& ANALYSIS} \\
+Collecting \& Cleaning, EDA, Feature Engineering, A/B Testing \\
+Visualization:Matplotlib, Tableau, Seaborn\\
+\textbf{NATURAL LANGUAGE PROCESSING} \\
+Libraries: NLTK, spaCy, Gensim, t-SNE \\
+Representation:Tf-idf/BoW, Word2Vec, Doc2Vec, Seq2Seq \\
+\textbf{MACHINE LEARNING METHODS} \\
+Supervised: Linear, Logistic, LASSO, Ridge, \& Elastic Net Regression; k-NN, Random Forest, Boosting  \\
+Unsupervised:K-Means, Hierarchical Clustering, PCA, SVD, NMF, LDA \\
+\textbf{DATABASE, CLOUD, \& PRODUCT} \\
+PostgreSQL, MongoDB, Spark, AWS, Flask, Heroku, CSS, HTML \\
+\textbf{PROJECT MANAGEMENT} \\
+Git, GitHub, Agile Workflow, JIRA \\
+
+%---------------------------------------------------------------------------------------
+%	PUBLICATION SECTION
+%---------------------------------------------------------------------------------------
+
+
+
+%----------------------------------------------------------------------------------------
+%	RELEVANT COURSE SECTION
+%----------------------------------------------------------------------------------------
+\section{Relevant \hspace{2mm} Courses}
+Data Structures and Algorithms 
+
+%----------------------------------------------------------------------------------------
+%	Selected Projects Section
+%----------------------------------------------------------------------------------------
+\section{Projects}
+All projects available on git : \url{https://www.github.com/mrashrike}
+%\setlist[itemize]{
+\begin{itemize}[leftmargin=*]
+ \item \textbf{\href{https://github.com/}{DNEURAL MACHINE TRANSLATION: EXPLAINING THE MEANING BEHIND LYRICS}} \\
+ Used lyric and annotation data from Genius.com API to train a character-based Seq2Seq LSTM model on AWS EC2 instance with GPU. Deployed Flask app on Heroku with trained model that generates new explanations for user-input lyrics. \\
+ Tools: Seq2Seq with RNN/LSTMs, Keras, Tensorflow, AWS EC2, Flask, CSS, HTML, Heroku
+ \item \textbf{\href{https://github.com/}{DOC2VEC AND ANNOTATED LYRICS: ARE THEY “GENIUS”?}} \\
+ Gathered lyric and annotation data from Genius.com API to explore whether the cosine similarity of their Doc2Vec vector representations could be useful in developing an automated system to accept/reject newly proposed annotations. Hypothesis test across true and falsely matched pairs yielded a significant p-value of 1.1e-171. \\
+ Tools: Gensim’s Doc2Vec, t-SNE, MongoDB, SciPy’s two-tailed hypothesis test
+ \item \textbf{\href{https://github.com/}{DOES WORK-LIFE BALANCE MATTER?}} \\
+ Leveraged student outcome and participation data across two subjects to predict social behaviors using logistic regression modeling with cross validation. Final models yielded F1 scores of 0.461 and 0.501, with an AUC of 0.632 and 0.521, respectively. \\
+ Tools: Scikit-Learn’s Logistic Regression, k-Fold Cross Validation, GridSearch 
+ 
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%	ACHIEVEMENT SECTION
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	HOBBIES SECTION
+%----------------------------------------------------------------------------------------
+
+\section{Hobbies}
+Competitive Coding, Watching Documentaries, Star Gazing, Editing Wiki Pages, Solving Puzzle
+
+\section{More}
+Please visit \href{https://www.ashrike.tech}{https://www.ashrike.tech}
+
+\end{resume}
+\end{document}

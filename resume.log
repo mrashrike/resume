@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.9)  20 JAN 2026 16:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.9)  13 FEB 2026 12:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1162,33 +1162,27 @@ LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/n' will be
 (Font)              scaled to size 9.0pt on input line 11.
 ) (./resume/experience.tex
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 10.0pt on input line 31.
+(Font)              scaled to size 10.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/n' will be
-(Font)              scaled to size 10.0pt on input line 31.
-
-
-Package hyperref Warning: Suppressing empty link on input line 31.
-
+(Font)              scaled to size 10.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/n' will be
-(Font)              scaled to size 8.0pt on input line 31.
+(Font)              scaled to size 8.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/m/sc' will be
-(Font)              scaled to size 8.0pt on input line 31.
+(Font)              scaled to size 8.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(1)/b/sc' will be
-(Font)              scaled to size 8.0pt on input line 31.
+(Font)              scaled to size 8.0pt on input line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/sl' in size <9> not avail
 able
 (Font)              Font shape `TU/SourceSansPro(2)/m/it' tried instead on inpu
-t line 31.
+t line 29.
 LaTeX Font Info:    Font shape `TU/SourceSansPro(2)/m/it' will be
-(Font)              scaled to size 9.0pt on input line 31.
-
-Package hyperref Warning: Suppressing empty link on input line 43.
-
-
-Package hyperref Warning: Suppressing empty link on input line 57.
-
-) (./resume/projects.tex) (./resume/skills.tex
-Overfull \hbox (24.71463pt too wide) in alignment at lines 12--37
+(Font)              scaled to size 9.0pt on input line 29.
+) (./resume/projects.tex
+LaTeX Font Info:    Font shape `TU/SourceSansPro(0)/b/n' will be
+(Font)              scaled to size 10.0pt on input line 21.
+)
+(./resume/skills.tex
+Overfull \hbox (24.71463pt too wide) in alignment at lines 12--42
 [] [] 
  []
 
@@ -1209,10 +1203,10 @@ Package rerunfilecheck Info: File `resume.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 31856 strings out of 468178
- 651271 string characters out of 5436863
- 1246682 words of memory out of 5000000
- 60054 multiletter control sequences out of 15000+600000
+ 31857 strings out of 468178
+ 651297 string characters out of 5436863
+ 1231679 words of memory out of 5000000
+ 60055 multiletter control sequences out of 15000+600000
  629293 words of font info for 107 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  131i,11n,135p,544b,462s stack positions out of 10000i,1000n,20000p,200000b,200000s
